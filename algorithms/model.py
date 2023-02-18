@@ -1,7 +1,7 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.preprocessing import StandardScaler, PolynomialFeatures, MinMaxScaler
+from sklearn.preprocessing import StandardScaler, PolynomialFeatures, QuantileTransformer, PowerTransformer
 from sklearn.pipeline import make_pipeline
 
 def model(X,y,title,size=0.2):
@@ -11,6 +11,8 @@ def model(X,y,title,size=0.2):
     # Create a pipeline for preprocessing and linear regression
     model = make_pipeline(
         StandardScaler(), # standardize the data
+        QuantileTransformer(n_quantiles=100, output_distribution='normal'),
+        PowerTransformer(method='yeo-johnson'),
         PolynomialFeatures(degree=2), # create polynomial features
         LinearRegression() # apply linear regression
     )
