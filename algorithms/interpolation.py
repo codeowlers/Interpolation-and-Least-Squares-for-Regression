@@ -1,9 +1,6 @@
 import numpy as np
 import pandas as pd
 
-
-
-
 def linear_interp(x, x_known, y_known):
     """
     Perform linear interpolation of missing values in a dataset.
@@ -39,10 +36,6 @@ def linear_interp(x, x_known, y_known):
 
     return y
 
-
-
-import pandas as pd
-import numpy as np
 
 def global_interp(df, col):
     """
