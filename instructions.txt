@@ -17,3 +17,41 @@ Check the documentation for your operating system to see if the command is diffe
 
 6- Navigate to main-script.ipynb and run the code using the "Run All" button.
 Make sure that the virtual environment is activated while running the notebook.
+
+I. Introduction
+
+Background on the importance of handling missing data in datasets and test them on using linear regression
+Brief overview of the methods used to fill null values
+II. Objectives
+
+To compare the performance of interpolation and least square approximation in filling null values
+To assess the impact of the filling methods on the performance of a regression model
+III. Methodology
+A. Data Collection and Preparation
+
+Load fetch_california_housing dataset from sklearn
+Add randomly generated null values to the dataset
+B. Null Value Filling
+
+Interpolate null values using a linear interpolation method
+Use least square approximation with Pseudo Inverse to fill null values
+C. Data Preprocessing
+
+Standardize the dataset
+D. Regression Model
+
+Run a regression model on the original dataset
+Run a regression model on the interpolated dataset
+Run a regression model on the dataset filled with least square approximation
+E. Performance Metrics
+
+Compute metrics to assess the performance of the regression models for each dataset, including R-squared, mean squared error, and mean absolute error.
+IV. Results
+
+Present the results of the regression models and the performance metrics computed for each dataset
+V. Conclusion
+
+Summarize the findings of the study and draw conclusions about the effectiveness of the methods used to fill null values in the dataset
+VI. Future Work
+
+Discuss potential future research directions, such as exploring other methods for filling null values or examining the impact of different preprocessing techniques on the performance of regression models.

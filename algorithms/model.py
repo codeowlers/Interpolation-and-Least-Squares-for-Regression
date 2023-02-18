@@ -27,5 +27,5 @@ def model(X,y,title,size=0.2):
     print("R-squared: ", r2)
     print("Mean Squared Error: ", mse)
     print()
-    return y_pred, r2, mse
+    return y_pred,y_test, r2, mse
 
